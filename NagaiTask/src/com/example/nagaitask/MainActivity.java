@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.os.Build;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -88,4 +90,11 @@ public class MainActivity extends Activity {
 //		WebView m2WebView  = (WebView) view.findViewById(R.id.webView1);
 //		mWebView.loadUrl("https://www.google.co.jp/");
 	}
+	public void Clicked2(View view){
+		Log.d("Test","Clicked2!");
+		EditText edittext = (EditText)findViewById(R.id.editText1);
+		String text = edittext.getText().toString();
+		Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+	}
+
 }
