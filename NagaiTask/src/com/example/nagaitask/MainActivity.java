@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
@@ -96,5 +97,16 @@ public class MainActivity extends Activity {
 		String text = edittext.getText().toString();
 		Toast.makeText(this, text, Toast.LENGTH_LONG).show();
 	}
-
+	@Override
+    public boolean onTouchEvent(MotionEvent event) {
+		String text;
+		EditText edittext = (EditText)findViewById(R.id.editText1);
+		if(edittext == null){
+			text = "nothing is written!";
+		}else{
+			text = edittext.getText().toString();
+		}
+		Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+        return true;
+    }
 }
