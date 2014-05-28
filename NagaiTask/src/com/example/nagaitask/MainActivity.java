@@ -82,6 +82,9 @@ public class MainActivity extends Activity {
 		public static void click(){
 			mWebView.loadUrl("https://www.google.co.jp/");
 		}
+		public static void click2(String url){
+			mWebView.loadUrl(url);
+		}
 		
 	}
 
@@ -95,7 +98,7 @@ public class MainActivity extends Activity {
 		Log.d("Test","Clicked2!");
 		EditText edittext = (EditText)findViewById(R.id.editText1);
 		String text = edittext.getText().toString();
-		Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+		PlaceholderFragment.click2(text);
 	}
 	@Override
     public boolean onTouchEvent(MotionEvent event) {

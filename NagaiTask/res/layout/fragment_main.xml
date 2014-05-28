@@ -23,20 +23,10 @@
         android:layout_below="@+id/button1"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:hint="Some word plz" >
+        android:hint="URL plz" >
 
         <requestFocus />
     </EditText>
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText1"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_marginRight="14dp"
-        android:onClick="Clicked2"
-        android:text="Get text" />
 
     <Button
         android:id="@+id/button1"
@@ -47,5 +37,15 @@
         android:layout_marginLeft="16dp"
         android:onClick="Clicked"
         android:text="Google" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignRight="@+id/editText1"
+        android:onClick="Clicked2"
+        android:text="Go by URL" />
 
 </RelativeLayout>
